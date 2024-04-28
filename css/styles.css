@@ -1,0 +1,417 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0px;
+    font-family: 'segoe ui';
+  }
+  
+  .nav {
+    height: 50px;
+    width: 100%;
+    background-color: #ffffff;
+    position: relative;
+    z-index: 99;
+  }
+  
+  .nav > .nav-header {
+    display: inline;
+  }
+  
+  .nav > .nav-header > .nav-title {
+    display: inline-block;
+    font-size: 22px;
+    color: #000000;
+    padding: 10px 10px 10px 10px;
+    padding:12px;
+    margin: 12px;     
+    font-weight: bold;
+  }
+  
+  .nav > .nav-btn {
+    display: none;
+  }
+  
+  .nav > .nav-links {
+    display: inline;
+    float: right;
+    font-size: 18px;
+  }
+  
+  .nav > .nav-links > a {
+    display: inline-block;
+    padding: 13px 10px 13px 10px;
+    text-decoration: none;
+    color: #000000;
+  }
+  
+  .nav > .nav-links > a:hover {
+      color:#5bcbfc;
+  }
+  
+  .nav > #nav-check {
+    display: none;
+  }
+  /* button style  */
+.Donate_button{
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 50px;
+  border: 1px solid #5bcbfc;
+  padding:14px;
+  margin: 15px;
+  
+}
+.Donate_button:hover{
+  border: 1px solid #ffffff;
+  background-color: #5bcbfc;
+  color: #ffffff;
+}
+/*image style background*/
+.image-container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+/* Image styling */
+.image-container img {
+  width: 100%; /* Adjust width as needed */
+  height: auto;
+}
+
+/*animations text*/
+@keyframes slideInFromLeft {
+  from {
+      opacity: 0;
+      transform: translateX(-100%);
+  }
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+/* Apply the animation class */
+.slide-in {
+  animation: slideInFromLeft 1.5s ease-in forwards;
+}
+
+
+
+.container {
+  text-align: center;
+  padding: 50px;
+  border-radius: 50px;
+  background-color: #16213e;
+
+}
+
+h1 {
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+p.subtitle {
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: #b0b0b0;
+}
+
+.banner {
+  border-radius: 10px;
+  padding: 20px;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.step {
+  width: 30%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/*icone animation*/
+@keyframes pulse {
+  0% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.2);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+.icon {
+  font-size: 24px;
+  display: block;
+  margin: 0 auto;
+  animation: pulse 1.5s infinite ease-in-out; /* Animation settings */
+}
+
+.description {
+  margin-top: 10px;
+}
+
+.description strong {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: #ffffff;
+}
+
+.description p {
+  font-size: 14px;
+  color: #ffffff;
+}
+
+/*donations question*/
+/* FAQ Header Styling */
+.faq-header {
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+  margin-top: 30px;
+  border-radius: 20px;
+}
+
+.faq-header h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+  color: #16213e;
+}
+
+.faq-header p {
+  margin: 0;
+  font-style: italic;
+}
+
+/* Container for the FAQ content */
+.faq-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+  flex-direction: column;
+  
+}
+
+.faq-content {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+/* FAQ item styling */  
+.faq-item {
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+.faq-item summary {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.faq-item details[open] summary {
+  color: #5bcbfc ;
+}
+
+.faq-item details[open] {
+  background-color: #fff;
+}
+
+/* Donation form */
+#donation-form {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+#donation-form >h2{
+  text-align: center;
+}
+#name,#email,#amount{
+  text-align: center;
+}
+#donation-form input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+#donation-form button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#donation-form button:hover {
+  background-color: #45a049;
+}
+
+/* Submit button */
+.Submit {
+  display: flex; /* Use flexbox layout */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  
+}
+
+
+/* Media queries for responsiveness */
+@media (max-width: 600px) {
+  .faq-container {
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+  }
+
+  .faq-content {
+      width: 100%;
+  }
+}
+
+
+/*Footer*/
+footer {
+  background-color: #16213e;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #333;
+  bottom: 0;
+  width: 100%;
+}
+.icone{
+  width: 25px;
+  height: 25px;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .banner {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .step {
+      width: 100%;
+      margin-bottom: 20px;
+  }
+
+    .nav > .nav-header > .nav-title {
+
+      margin: 0;}
+    .nav > .nav-btn {
+      display: inline-block;
+      position: absolute;
+      right: 0px;
+      top: 0px;
+    }
+    .nav > .nav-btn > label {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      padding: 13px;
+    }
+    .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+      background-color: rgb(255, 255, 255);
+    }
+    .nav > .nav-btn > label > span {
+      display: block;
+      width: 25px;
+      height: 10px;
+      border-top: 2px solid #000000;
+    }
+    .nav > .nav-links {
+      position: absolute;
+      display: block;
+      width: 100%;
+      background-color: #ffffff;
+      height: 0px;
+      transition: all 0.3s ease-in;
+      overflow-y: hidden;
+      top: 50px;
+      left: 0px;
+    }
+    .nav > .nav-links > a {
+      display: block;
+      width: 100%;
+    }
+    .nav > #nav-check:not(:checked) ~ .nav-links {
+      height: 0px;
+    }
+    .nav > #nav-check:checked ~ .nav-links {
+      height: calc(100vh - 50px);
+      overflow-y: auto;
+    }
+    .text-overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 15px; /* Adjust font size as needed */
+      font-weight: bold; /* Adjust font weight as needed */
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Add shadow for readability */
+    }
+
+    .partOne{
+      margin: 25px;
+      text-align: center;
+    }
+    
+    .x{
+      display: none;
+    }
+    .Donate_button{
+      width: 50%;
+    }
+
+  }/* Text overlay styling */
+
+@media screen and (min-width: 992px) {
+  .cell,.partOne ,.parte{
+  display: flex; /* Set display to flex */
+  flex-direction: column; /* Arrange children in a column */
+  justify-content: center; /* Center children vertically */
+  align-items: center; /* Center children horizontally */
+  height: 100vh; /* Full viewport height */
+  margin: 25px;
+}
+  .Donate_button {
+    align-self: flex-start; /* Align button to the left */
+   
+  }
+  .y{
+    width: 35%; 
+  }
+  .text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px; /* Adjust font size as needed */
+    font-weight: bold; /* Adjust font weight as needed */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Add shadow for readability */
+  }
+}
