@@ -1,35 +1,30 @@
-// Toggle donation form visibility
-document.getElementById('donate-button').addEventListener('click', function () {
-    const donationForm = document.getElementById('donation-form');
-    if (donationForm.style.display === 'none') {
-      donationForm.style.display = 'block';
-    } else {
-      donationForm.style.display = 'none';
-    }
-  });
+document.getElementById('donationForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+  submitDonation();
+});
 
-  // Function to handle form submission
-  function submitDonation() {
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const amount = document.getElementById('amount').value;
+function submitDonation() {
+  // Collect the form data
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const amount = document.getElementById('amount').value;
+  const comment = document.getElementById('comment').value;
 
-    // Add your logic here to handle the donation data
+  // Create an informative alert message
+  const alertMessage = `
+      Thank you, ${name}, for your generous donation!
+      
+      Donation Details:
+      - Amount: $${amount}
+      - Email: ${email}
+      - Comment: ${comment}
 
-    alert(`Thank you, ${name}, for your donation of $${amount}! We will send a confirmation to ${email}.`);
-    // Reset the form
-    document.getElementById('name').value = '';
-    document.getElementById('email').value = '';
-    document.getElementById('amount').value = '';
-  }
+      We greatly appreciate your support!
+  `;
 
-function handleIntersection(entries, observer) {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('slide-in');
-            observer.unobserve(entry.target); // Stop observing once the animation is triggered
-        }
-    });
+  // Display the alert message
+  alert(alertMessage);
+
 }
 
 // Create an Intersection Observer

@@ -74,6 +74,10 @@
   text-align: center;
   color: white;
 }
+.container > h1{
+  color: #ffffff;
+
+}
 
 /* Image styling */
 .image-container img {
@@ -390,13 +394,17 @@ footer {
   }/* Text overlay styling */
 
 @media screen and (min-width: 992px) {
-  .cell,.partOne ,.parte{
+  .cell,.partOne {
   display: flex; /* Set display to flex */
   flex-direction: column; /* Arrange children in a column */
   justify-content: center; /* Center children vertically */
   align-items: center; /* Center children horizontally */
   height: 100vh; /* Full viewport height */
   margin: 25px;
+}
+.parte{
+  margin: 25px;
+  margin-top: 100px;
 }
   .Donate_button {
     align-self: flex-start; /* Align button to the left */
