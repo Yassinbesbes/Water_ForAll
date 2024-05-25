@@ -12,37 +12,30 @@ function submitDonation() {
 
   // Create an informative alert message
   const alertMessage = `
-      Thank you, ${name}, for your generous donation!
-      
-      Donation Details:
-      - Amount: $${amount}
-      - Email: ${email}
-      - Comment: ${comment}
-
-      We greatly appreciate your support!
+    Name: ${name}
+    Email: ${email}
+    Donation Amount: $${amount}
+    Comment: ${comment}
   `;
 
   // Display the alert message
   alert(alertMessage);
 
+  // Reset the form
+  document.getElementById('donationForm').reset();
 }
 
-// Create an Intersection Observer
-const observer = new IntersectionObserver(handleIntersection, {
-    root: null, // Use the viewport as the root
-    rootMargin: '0px',
-    threshold: 0.1 // Trigger when 10% of the element is in view
-});
+//Scroll parte:
+document.addEventListener("DOMContentLoaded", function() {
+  // Get the button element by its ID
+  var button = document.getElementById("scrollButton");
 
-// Observe the h3 and p elements
-const h3 = document.querySelector('h3');
-const p = document.querySelector('p');
-observer.observe(h3);
-observer.observe(p);
+  // Add an event listener for the 'click' event
+  button.addEventListener("click", function() {
+      // Get the footer element
+      var footer = document.getElementById("section3");
 
-//scroll
-
-document.getElementById('scrollButton').addEventListener('click', function() {
-    // Scroll to the footer element
-    document.getElementById('footer').scrollIntoView({ behavior: 'smooth' });
+      // Scroll to the footer element smoothly
+      footer.scrollIntoView({ behavior: "smooth" });
+  });
 });

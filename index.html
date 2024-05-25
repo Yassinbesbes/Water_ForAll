@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Foundation for Sites</title>
+  <title>Water_For_All</title>
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/app.css">
 </head>
@@ -12,7 +12,7 @@
 
   <!-- Navigation -->
   <div class="nav">
-    <input type="checkbox" id="nav-check">
+    <input  title="nav" type="checkbox" id="nav-check" />
     <div class="nav-header">
       <div class="nav-title">WDonation</div>
     </div>
@@ -26,7 +26,7 @@
     <div class="nav-links">
       <a href="#">Main</a>
       <a href="#">About</a>
-      <a href="#">How To Start</a>
+      <a href="#How-To-Start" >How To Start</a>
       <button id="scrollButton" class="Donate_button x">Donate Now</button>
     </div>
   </div>
@@ -43,19 +43,21 @@
   <div class="main-content">
 
     <!-- Section: Part One -->
-    <div class="grid-x grid-padding-x align-center">
-      <div class="columns medium-6 large-4 partOne">
-        <h3>A water filter may be all you need</h3>
-        <p>We created this website to attract people's attention to the charitable work of the city of Gabes and to collect donations to support the association's treasury.</p>
-        <button class="Donate_button y">Read More</button>
+    <div class="grid-x grid-padding-x align-center " id="section1">
+      <div class="medium-6 large-4 partOne ">
+        <div class="slide-in">
+          <h3>A water filter may be all you need</h3>
+          <p >Water donations fund vital projects like wells and filtration systems, improving health and quality of life in underserved communities. Every contribution helps ensure access to clean, safe water for those in need</p>
+          <button class="Donate_button ">Read More</button>
+        </div>
       </div>
-      <div class="columns medium-6 large-4 parte">
+      <div class="columns medium-6 large-4">
         <img src="images/parte2.png" alt="cup of water">
       </div>
     </div>
 
     <!-- Section: How to Start Help -->
-    <div class="container">
+    <div class="container " id="How-To-Start">
       <h1>How To Start Help</h1>
       <p class="subtitle">In carrying out their duties, charitable foundations provide a variety of social services such as education, food, medicine, housing, and others.</p>
       <div class="banner">
@@ -127,39 +129,46 @@
     </div>
 
     <!-- Donation Form -->
-    <div style="text-align: center; margin-top: 20px; display:none;">
-      <button id="donate-button" class="Donate_button">Donate Now</button>
-    </div>
-
-    <div class="grid-x grid-padding-x align-center">
-      <div class="columns medium-6 large-4 ">
-        <div ><h1>Donate Now</h1>
-    <p>We believe everyone deserves access to clean and safe water. Share your thoughts and ideas on how we can help others live better and drink cleaner water:</p>        </div>
-    <img src="./images/Shape.png" alt="Shape"/>
+    <div id="section3">
+      <div style="text-align: center; margin-top: 20px; display:none;">
+        <button id="donate-button" class="Donate_button">Donate Now</button>
       </div>
-      <div class="columns medium-6 large-4 parte">
-        <div id="donation-form">
-          <form id="donationForm">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" placeholder="Name" required>
+
+      <div class="grid-x grid-padding-x align-center">
+        <div class="columns medium-6 large-4 ">
+          <div class="Donation-form">
+            <h1>Donate Now</h1><hr>
+            <p>We believe everyone deserves access to clean and safe water. Share your thoughts and ideas on how we can help others live better and drink cleaner water:</p>        
+          </div>
+          <img src="./images/Shape.png" alt="Shape"/>
+        </div>
+        <div class="columns medium-6 large-4 parte">
+          <div id="donation-form">
+            <form id="donationForm">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" placeholder="Name" required>
+          
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" placeholder="Email" required>
+          
+              <label for="amount">Donation Amount ($):</label>
+              <input type="number" id="amount" name="amount" placeholder="Donation Amount $" min="1" required>
+          
+              <label for="comment">Comment:</label>
+              <textarea id="comment" name="comment" rows="4" cols="50" required></textarea>
+          
+              <div class="submit">
+                  <button type="submit" aria-label="Submit Donation">Submit Donation</button>
+              </div>
+            </form>
+          </div>
         
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Email" required>
-        
-            <label for="amount">Donation Amount ($):</label>
-            <input type="number" id="amount" name="amount" placeholder="Donation Amount $" min="1" required>
-        
-            <label for="comment">Comment:</label>
-            <textarea id="comment" name="comment" rows="4" cols="50" required></textarea>
-        
-            <div class="submit">
-                <button type="submit" aria-label="Submit Donation">Submit Donation</button>
-            </div>
-        </form>
         </div>
       </div>
     </div>
-  </div> <!-- End of Main Content -->
+  </div>
+
+  <!-- End of Main Content -->
 
   <!-- Footer -->
   <footer id="footer">
