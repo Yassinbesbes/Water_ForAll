@@ -1,4 +1,4 @@
-# [WaterDonation](https://yassinbesbes.github.io/Water_ForAll/)
+# [WaterDonation](https://yassinbesbes.github.io/Donation-App/)
 
 Water Conservation: Protecting Our Most Precious Resource
 
